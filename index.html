@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Underdog" rel="stylesheet">
+    <title>Hangskeleton</title>
+  </head>
+  <body>
+    <div class="container">
+        <header>
+          <h1>Hangskeleton<span>&nbsp;&nbsp;&nbsp;&nbsp;Countries edition</span></h1>
+          <nav>
+            <a href="#" class="instructions">Instructions</a>
+            <a href="#" class="categories">Categories</a>
+          </nav>
+          <div class="panels">
+            <div id="instructions-panel">
+              <p>Guess a letter. If you guess incorrectly, your score will decrease and a piece of the skeleton will appear. If your score reaches zero, you lose!</p>
+            </div>
+            <div id="categories-panel">
+              <a href="#">africa</a>
+              <a href="#">asia</a>
+              <a href="#">europe</a>
+              <a href="#">north america</a>
+              <a href="#">south america</a>
+              <a href="#">oceania</a>
+            </div>
+          </div>
+        </header>
+        <main>
+          <div class="hangman">
+            <img src="images/hangman0.png" alt="A cartoon skeleton on a gallow">
+            <div id="score-board">
+              <h2>Score:&nbsp;<span id="score">6</span></h2>
+            </div>
+            <div id="cumulative-score">
+              <h2>Win Streak:&nbsp;<span id="streak">0</span></h2>
+              <h2>Cumulative score:&nbsp;<span id="cumulative">0</span></h2>
+            </div>
+          </div>
+          <div class="background">
+            <div class="notification">
+              <p>Choose a category to begin.</p>
+            </div>
+            <div id="letter-board">
+            </div>
+            <div class="alphabet">
+            </div>
+          </div>
+        </main>
+        <footer>
+          <h3>Created by Erica Norby</h3>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

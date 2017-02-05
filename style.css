@@ -1,0 +1,225 @@
+body {
+  margin: 0 auto;
+  width: 1000px;
+  padding: 30px;
+  user-select: none;
+}
+
+.container {
+  background: rgb(239, 240, 249);
+}
+
+header {
+  padding: 15px;
+  background: rgb(110, 110, 130);
+  border-bottom: 5px rgb(62, 63, 73) solid;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+nav {
+  display: inline;
+  float: right;
+  text-align: right;
+  font-family: 'Amatic SC', cursive;
+  padding: 15px;
+}
+
+nav > a {
+  margin: 20px;
+  color: lightgray;
+}
+
+nav > a:hover {
+  color: rgb(227, 252, 237);
+}
+
+footer {
+  margin-top: 30px;
+  padding: 15px;
+  background: rgb(110, 110, 130);
+  color: white;
+  border-bottom: 5px rgb(62, 63, 73) solid;
+  border-radius: 10px;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 60px;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 15px;
+}
+
+header span {
+  font-size: 25px;
+  font-weight: normal;
+}
+
+#score-board h2 {
+  font-family: 'Amatic SC', cursive;
+  margin-top: 5px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+#cumulative-score h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  margin-left: 40px;
+}
+
+main {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+nav > a {
+  padding-bottom: 25px;
+}
+
+#instructions-panel p {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  margin: 30px;
+}
+
+#instructions-panel {
+  display: none;
+  width: 500px;
+  height: 150px;
+  background: white;
+  position: relative;
+  float: right;
+  margin: 15px 0 0 1000px;
+  border: 2px black solid;
+  /*border-radius: 8px;*/
+  color: black;
+}
+
+#categories-panel {
+  display: none;
+  height: 300px;
+  width: 150px;
+  background: white;
+  position: relative;
+  float: right;
+  margin: 15px 0 0 1000px;
+  border: 2px black solid;
+}
+
+#categories-panel > a {
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  padding: 10px;
+}
+
+#categories-panel > a:hover {
+  background: rgb(227, 252, 237);
+}
+
+#letter-board {
+  width: 630px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+
+#score-board {
+  margin: 10px 0 0 40px;
+  height: 50px;
+  width: 85px;
+  float: left;
+  background: rgb(227, 252, 237);
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#cumulative-score {
+  margin: 10px 0 0 10px;
+  height: 50px;
+  width: 155px;
+  background: rgb(206, 206, 206);
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.blank-letter {
+  border-bottom: 5px solid black;
+  height: 40px;
+  width: 35px;
+  margin: 7px;
+  font-size: 35px;
+  text-align: center;
+  font-family: 'Underdog', cursive;
+}
+
+.letter {
+  height: 35px;
+  width: 35px;
+  margin: 5px;
+  text-align: center;
+}
+
+.empty-value {
+  height: 40px;
+  width: 35px;
+  margin: 7px;
+}
+
+.word {
+  display: flex;
+}
+
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 600px;
+  font-family: 'Underdog', cursive;
+}
+
+.notification {
+  height: 50px;
+}
+
+.notification p {
+  font-size: 30px;
+  font-family: 'Amatic SC', cursive;
+  padding: 10px;
+  display: inline;
+}
+
+.background {
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
