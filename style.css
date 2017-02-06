@@ -98,6 +98,22 @@ nav > a {
   padding-bottom: 25px;
 }
 
+input {
+  width: 300px;
+  margin: 10px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+button {
+  font-size: 20px;
+  padding: 5px;
+  color: white;
+  background: gray;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bold;
+}
+
 #instructions-panel p {
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
@@ -141,7 +157,7 @@ nav > a {
 }
 
 #letter-board {
-  width: 630px;
+  width: 620px;
   display: flex;
   align-items: flex-end;
   flex-wrap: wrap;
@@ -173,8 +189,8 @@ nav > a {
 
 .blank-letter {
   border-bottom: 5px solid black;
-  height: 40px;
-  width: 35px;
+  height: 35px;
+  width: 30px;
   margin: 7px;
   font-size: 35px;
   text-align: center;
@@ -186,11 +202,12 @@ nav > a {
   width: 35px;
   margin: 5px;
   text-align: center;
+  pointer-events: none;
 }
 
 .empty-value {
-  height: 40px;
-  width: 35px;
+  height: 35px;
+  width: 30px;
   margin: 7px;
 }
 
@@ -218,7 +235,7 @@ nav > a {
 }
 
 .background {
-  padding-left: 40px;
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

@@ -9,8 +9,8 @@ var categories = {
 "maldives","mongolia","nepal","oman","pakistan","philippines","qatar","russia","saudi arabia","singapore","sri lanka","syria","tajikistan","thailand","turkey","turkmenistan","united arab emirates","uzbekistan","vietnam","yemen"],
   europe: ["albania","andorra","armenia","austria","azerbaijan","belarus","belgium","bosnia","bulgaria","croatia","cyprus","czech republic","denmark","estonia","finland","france","georgia","germany","greece","hungary","iceland","ireland","italy","latvia",
 "liechtenstein","lithuania","luxembourg","macedonia","malta","moldova","monaco","montenegro","netherlands","norway","poland","portugal","romania","san marino","serbia","slovakia","slovenia","spain","sweden","switzerland","ukraine","united kingdom"],
-  northAmerica: ["antigua","bahamas","barbados","belize","canada","costa rica","cuba","dominica","dominican republic","el salvador","grenada","guatemala","haiti","honduras","jamaica","mexico","nicaragua","panama","saint lucia","trinidad","united states"],
-  southAmerica: ["argentina","bolivia","brazil","chile","colombia","ecuador","guyana","paraguay","peru","suriname","uruguay","venezuela"],
+  "north america": ["antigua","bahamas","barbados","belize","canada","costa rica","cuba","dominica","dominican republic","el salvador","grenada","guatemala","haiti","honduras","jamaica","mexico","nicaragua","panama","saint lucia","trinidad","united states"],
+  "south america": ["argentina","bolivia","brazil","chile","colombia","ecuador","guyana","paraguay","peru","suriname","uruguay","venezuela"],
   oceania: ["australia","fiji","kiribati","marshall islands","micronesia","nauru","new zealand","palau","papua new guinea","samoa","solomon islands","tonga","tuvalu","vanuatu"]
 }
 
@@ -103,6 +103,14 @@ function guessedLetter(){
   }
 }
 
+function enterPhrase(){
+  phrase = $("input").val();
+  reset();
+  createArray(phrase);
+  createLetters();
+  $(".categories").css("pointer-events","none")
+}
+
 //if player guesses incorrectly, subtract from score
 function decreaseScore(){
   if (score > 0) {
@@ -155,7 +163,11 @@ function winGame(){
 
 //ask if user wants to play again
 function playAgain(){
-  $(".notification").append("<p>play again? choose a category.</p>")
+  var replayText = "<p>play again?</p>" + "<p style='font-size: 24px; padding-left: 0px'>choose a category or enter your own puzzle.</p>"
+  $(".notification").append(replayText)
+  $(".notification").append("<input placeholder='Type your word or phrase'></input>")
+  $(".notification").append("<button>Click Here</button>")
+  $("button").on("click",enterPhrase)
 }
 
 //cycles through images when player guesses a wrong letter
@@ -191,7 +203,7 @@ $("#categories-panel > a").click(startGame)
 function startGame(){
   reset();
   //create variable to pick a random number from 0-9
-  chosen = $(this).html()
+  chosen = $(this).text()
   var random = Math.floor(Math.random() * categories[chosen].length);
   var addCategory = $(".notification").append("<p></p>")
   $(".notification p").text(chosen)
@@ -213,10 +225,13 @@ function reset(){
   $(".letter").css("pointer-events","auto")
   $(".hangman > img").attr("src", images[imageNumber])
   $("#letter-board").empty()
-  $(".notification > p").remove()
+  $(".notification > * ").remove()
 }
 
 //when a letter of the alphabet is clicked:
 $(".letter").click(guessedLetter)
+
+//when button is clicked:
+$("button").on("click",enterPhrase)
 
 });
