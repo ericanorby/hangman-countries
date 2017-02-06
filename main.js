@@ -165,7 +165,7 @@ function winGame(){
 function playAgain(){
   var replayText = "<p>play again?</p>" + "<p style='font-size: 24px; padding-left: 0px'>choose a category or enter your own puzzle.</p>"
   $(".notification").append(replayText)
-  $(".notification").append("<input placeholder='Type your word or phrase'></input>")
+  $(".notification").append("<input placeholder='Type your word or phrase' maxlength='30'></input>")
   $(".notification").append("<button>Click Here</button>")
   $("button").on("click",enterPhrase)
 }
